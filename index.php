@@ -1,11 +1,11 @@
 <?php
 //establish connection with database 
-//require_once 'connection.php';
-//require_once 'models/reserve-model.php';
+require_once 'connection.php';
+require_once 'models/reserve-model.php';
 //$q = $_GET['q']; //save search term
-//$conn = getConnection();
-//$resortModel = new resort($conn);
-//$matches = $resortModel->search($q);
+$conn = getConnection();
+$resortModel = new resort($conn);
+$matches = $resortModel->search($q);
 
 
 ?>
