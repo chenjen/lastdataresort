@@ -1,11 +1,11 @@
 <?php
 //establish connection with database 
-require_once 'connection.php';
-require_once 'models/reserve-model.php';
+//require_once 'connection.php';
+//require_once 'models/reserve-model.php';
 //$q = $_GET['q']; //save search term
-$conn = getConnection();
-$resortModel = new resort($conn);
-$matches = $resortModel->search($q);
+//$conn = getConnection();
+//$resortModel = new resort($conn);
+//$matches = $resortModel->search($q);
 
 
 ?>
@@ -24,11 +24,14 @@ $matches = $resortModel->search($q);
     <?php 
      
     include 'views/search-form.php';
+
      if (count($matches) == 0) { //display message if search did not match any results
      ?><p style="color:red;">Your search did not match any results. Please try again with a different search.</p> <?php    
      } 
     include 'views/matches.php'; //show rooms when searched 
-     
+    include 'views/update.php';
+    include 'views/delete.php';
+    include 'views/view.php';
     ?>
  <!-- GitHub Repo-->
  <br><footer><a href="https://github.com/INFO344-win-2016/challenges-chenjen">GitHub Repo</a></footer><br>
